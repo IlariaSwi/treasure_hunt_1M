@@ -1,0 +1,47 @@
+[
+    {
+        "id": "1",
+        "team": "1",
+        "number": "1",
+        "answer": "banana",
+        "clue": "Rentrez le mot qui apparaît quand vous décodez le message en binaire.",
+        "location": "Cafétéria",
+        "nextStation": "3" 
+    },
+    {
+        "id": "2",
+        "team": "2",
+        "number": "1",
+        "answer": "234",
+        "clue": "Pour cette station, vous devez... blabla",
+        "location": "Bibliothèque",
+        "nextStation": "4"
+    },
+    {
+        "id": "3",
+        "team": "1",
+        "number": "2",
+        "answer": "coco",
+        "clue": "Pour cette station, vous devez... blabla",
+        "location": "Dans la forêt derrière la salle de sport",
+        "nextStation": "5"
+    },
+    {
+        "id": "4",
+        "team": "2",
+        "number": "2",
+        "answer": "15",
+        "clue": "Pour cette station, vous devez... blabla",
+        "location": "Parking du gymnase. Chercher la plaque que vous venez de trouver.",
+        "nextStation": "5"
+    },
+    {
+        "id": "5",
+        "team": "1",
+        "number": "3",
+        "answer": null,
+        "clue": "Pour cette station, vous devez... blabla",
+        "location": "Grand arbre devant la HEP",
+        "nextStation": null
+    }
+]

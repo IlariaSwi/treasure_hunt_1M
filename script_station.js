@@ -1,23 +1,65 @@
 // Station Page Logic
-const stations = [
-    {
-        id: "1",
-        team: "1",
-        number: "1",
-        answer: "banana",
-        clue: "Rentrez le mot qui apparaît quand vous décodez le message en binaire.",
-        nextLocation: "La prochaine station est au parking du gymnase. Chercher la plaque suivante: VD..." 
-    },
-    {
-        id: "2",
-        team: "2",
-        number: "1",
-        answer: "234",
-        clue: "Pour cette station, vous devez... blabla",
-        nextLocation: "Allez, vite ! La prochaine énigme vous attend à l'entrée de la salle de sport."
-    },
-    // Add more station objects as needed
-];
+// const stations = [
+//     {
+//         id: "1",
+//         team: "1",
+//         number: "1",
+//         answer: "banana",
+//         clue: "Rentrez le mot qui apparaît quand vous décodez le message en binaire.",
+//         location: "Cafétéria",
+//         nextStation: "3" 
+//     },
+//     {
+//         id: "2",
+//         team: "2",
+//         number: "1",
+//         answer: "234",
+//         clue: "Pour cette station, vous devez... blabla",
+//         location: "Bibliothèque",
+//         nextStation: "4"
+//     },
+//     {
+//         id: "3",
+//         team: "1",
+//         number: "2",
+//         answer: "coco",
+//         clue: "Pour cette station, vous devez... blabla",
+//         location: "Dans la forêt derrière la salle de sport",
+//         nextStation: "5"
+//     },
+//     {
+//         id: "4",
+//         team: "2",
+//         number: "2",
+//         answer: "15",
+//         clue: "Pour cette station, vous devez... blabla",
+//         location: "Parking du gymnase. Chercher la plaque que vous venez de trouver.",
+//         nextStation: "5"
+//     },
+//     {
+//         // final station -- prof is here !
+//         id: "5",
+//         team: "1",
+//         number: "3",
+//         answer: NaN,
+//         clue: "Pour cette station, vous devez... blabla",
+//         location: "Grand arbre devant la HEP",
+//         nextStation: NaN
+//     },
+//     // Add more station objects as needed
+// ];
+
+// Load station data from JSON file
+fetch('stations.json')
+    .then(response => response.json())
+    .then(data => {
+        // Store the station data in a variable
+        const stations = data;
+        // Use the station data as needed
+        console.log(stations);
+    })
+    .catch(error => console.error('Error loading station data:', error));
+
 
 function getStationById(id) {
     for (let i = 0; i < stations.length; i++) {
@@ -55,17 +97,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const teamInfoElement = document.getElementById("teamInfo");
     teamInfoElement.classList.add("team" + station.team);
 
-
-
     // Add event listener for the submit button
     document.getElementById("submitButton").addEventListener("click", function() {
         let answer = document.getElementById("answerInput").value.trim().toLowerCase();
         if (answer === station.answer) {
-            document.getElementById("validationResult").textContent = "Yes, c'est correct ! Passez à l'énigme suivante.";
+            document.getElementById("validationResult").textContent = "Yes, c'est correct ! Station suivante :";
             document.getElementById("nextLocation").style.display = "block";
             revealNextLocation(station);
         } else {
-            document.getElementById("validationResult").textContent = "Eh non, ce n'est pas ça. Essayez à nouveau !";
+            document.getElementById("validationResult").textContent = "Eh non, ce n'est pas ça. Réessayez !";
         }
     });
 });
@@ -91,8 +131,8 @@ function getParameterByName(name, url) {
 // Function to reveal the next clue location
 function revealNextLocation(station) {
     // Get the next clue location from the current station data
-    const nextLocation = station.nextLocation;
+    const nextStation = getStationById(station.nextStation);
 
     // Display the next clue location on the page
-    document.getElementById("nextLocationText").textContent = nextLocation;
+    document.getElementById("nextLocationText").textContent = nextStation.location;
 }
