@@ -5,7 +5,7 @@ const stations = [
         team: "1",
         number: "1",
         answer: "banana",
-        clue: "Rentrer le mot qui apparaît quand vous décodez le message en binaire.",
+        clue: "Rentrez le mot qui apparaît quand vous décodez le message en binaire.",
         nextLocation: "La prochaine station est au parking du gymnase. Chercher la plaque suivante: VD..." 
     },
     {
