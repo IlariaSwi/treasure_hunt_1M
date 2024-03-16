@@ -62,7 +62,7 @@ fetch('stations.json')
 
 
 function getStationById(id) {
-    console.log(stations)
+    console.log(stations);
     for (let i = 0; i < stations.length; i++) {
         if (stations[i].id === id) {
             return stations[i];
