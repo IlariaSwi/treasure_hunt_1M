@@ -5,16 +5,16 @@ const stations = [
         team: "1",
         number: "1",
         answer: "banana",
-        clue: "Voici la consigne pour la station 1.",
-        nextLocation: "Station 2 is under the oak tree." 
+        clue: "Rentrer le mot qui apparaît quand vous décodez le message en binaire.",
+        nextLocation: "La prochaine station est au parking du gymnase. Chercher la plaque suivante: VD..." 
     },
     {
         id: "2",
         team: "2",
         number: "1",
         answer: "234",
-        clue: "This is the clue for station 2.",
-        nextLocation: "Station 2 is across the bridge."
+        clue: "Pour cette station, vous devez... blabla",
+        nextLocation: "Allez, vite ! La prochaine énigme vous attend à l'entrée de la salle de sport."
     },
     // Add more station objects as needed
 ];
@@ -61,10 +61,11 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("submitButton").addEventListener("click", function() {
         let answer = document.getElementById("answerInput").value.trim().toLowerCase();
         if (answer === station.answer) {
-            document.getElementById("validationResult").textContent = "Correct answer! Proceed to the next clue.";
+            document.getElementById("validationResult").textContent = "Yes, c'est correct ! Procédez vers l'énigme suivante.";
+            document.getElementById("nextLocation").style.display = "block";
             revealNextLocation(station);
         } else {
-            document.getElementById("validationResult").textContent = "Incorrect answer. Try again!";
+            document.getElementById("validationResult").textContent = "Eh non, ce n'est pas ça. Essazey à nouveau !";
         }
     });
 });

@@ -13,9 +13,9 @@ function displayFirstLocation(teamNumber) {
     // Display the first location for the selected team
     let firstLocation;
     if (teamNumber === "1") {
-        firstLocation = "Location 1 for Team 1"; // Replace with actual location
+        firstLocation = "Station 1 pour équipe 1"; // Replace with actual location
     } else {
-        firstLocation = "Location 1 for Team 2"; // Replace with actual location
+        firstLocation = "Station 1 pour équipe 2"; // Replace with actual location
     }
     document.getElementById("clueDisplay").innerHTML = "<p>" + firstLocation + "</p>";
 }
