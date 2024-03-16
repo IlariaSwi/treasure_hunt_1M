@@ -61,11 +61,11 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("submitButton").addEventListener("click", function() {
         let answer = document.getElementById("answerInput").value.trim().toLowerCase();
         if (answer === station.answer) {
-            document.getElementById("validationResult").textContent = "Yes, c'est correct ! Procédez vers l'énigme suivante.";
+            document.getElementById("validationResult").textContent = "Yes, c'est correct ! Passez à l'énigme suivante.";
             document.getElementById("nextLocation").style.display = "block";
             revealNextLocation(station);
         } else {
-            document.getElementById("validationResult").textContent = "Eh non, ce n'est pas ça. Essazey à nouveau !";
+            document.getElementById("validationResult").textContent = "Eh non, ce n'est pas ça. Essayez à nouveau !";
         }
     });
 });
