@@ -1,0 +1,108 @@
+body {
+    font-family: Poppins, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    font-family: Poppins, sans-serif;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    font-family: Poppins, sans-serif;
+    padding: 10px 20px;
+    background-color: #c358f5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8f04d4;
+}
+
+#clueDisplay {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.banner {
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#answerInput {
+    width: calc(100% - 80px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#validationResult {
+    margin-top: 20px;
+}
+
+.container-specific {
+    display: flex;
+    justify-content: center; /* Horizontally center the flex items */
+}
+
+#teamInfo {
+    width: 200px;
+    text-align: center;
+}
+
+#teamInfo.team1 {
+    background-color: rgb(11, 153, 16); /* Change background color for team 1 */
+    color: white; /* Change text color for better readability */
+}
+
+/* CSS styles for team 2 */
+#teamInfo.team2 {
+    background-color: rgb(255, 0, 144); /* Change background color for team 2 */
+    color: white; /* Change text color for better readability */
+}
+
+/* CSS styles for the station image */
+.station-image {
+    width: 100%;
+    max-width: 400px; /* Adjust maximum width as needed */
+    display: block; /* Ensures the image is displayed as a block-level element */
+    margin: 20px auto; /* Centers the image horizontally with some spacing */
+    border-radius: 8px; /* Adds rounded corners to the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+/* CSS styles for the clue icon */
+.clue-icon {
+    width: 24px; /* Adjust the width of the icon */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    margin-right: 8px; /* Add spacing between the icon and the text */
+}

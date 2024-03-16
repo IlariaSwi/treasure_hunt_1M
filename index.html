@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <img src="banner.jpg" alt="Welcome Banner" class="banner">
+        <h1>Welcome to the Treasure Hunt!</h1>
+        <p>Please select your team:</p>
+        <form id="teamForm">
+            <input type="radio" id="team1" name="team" value="1">
+            <label for="team1">Team 1</label><br>
+            <input type="radio" id="team2" name="team" value="2">
+            <label for="team2">Team 2</label><br>
+            <button type="submit">Start</button>
+        </form>
+        <div id="clueDisplay"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
