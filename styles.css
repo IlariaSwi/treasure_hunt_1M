@@ -117,7 +117,7 @@ button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
 }
 
-/* CSS styles for the clue icon */
+/* CSS styles for the page icons */
 .clue-icon {
     width: 24px; /* Adjust the width of the icon */
     height: auto; /* Automatically adjust the height to maintain aspect ratio */
@@ -130,6 +130,11 @@ button:hover {
     height: auto; /* Automatically adjust the height to maintain aspect ratio */
     margin-right: 8px; /* Add spacing between the icon and the text */
     vertical-align: middle;
+}
+
+.score-icon {
+    width: 40px;
+    height: 40px;
 }
 
 
