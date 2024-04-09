@@ -60,57 +60,32 @@ function initializePage(station) {
     // Set the team number to color the team element
     const teamInfoElement = document.getElementById("teamInfo");
     teamInfoElement.classList.add("team" + station.team);
-    // Set the team score for current team
-    let current_score = getScoreByTeam(station.team);
-    document.getElementById("teamScore").textContent = current_score;
+    // Set the team score for current team 
+    document.getElementById("teamScore").textContent = getScore(station.team);
     // Add event listener for the submit button
     document.getElementById("submitButton").addEventListener("click", function() {
         let answer = document.getElementById("answerInput").value.trim().toLowerCase();
         if (answer === station.answer) {
             document.getElementById("validationResult").textContent = "Yes, c'est correct ! Station suivante :";
             document.getElementById("nextLocation").style.display = "block";
+            document.getElementById("nextLocationText").style.display = "block";
             revealNextLocation(station.nextStation); // Pass 'stations' array
-            // update score
-            current_score = current_score + 1;
-            document.getElementById("teamScore").textContent = current_score;
-            updateScoreFile(station.team, current_score);
+            // add points per corrects answer
+            updateScore(4, station.team);
+            document.getElementById("teamScore").textContent = getScore(station.team);
+            // hide the answer block
+            document.getElementById("answerBox").style.display = "none";
+            // if last station, clear local storage. Get next station
+            let nextSt = getStationById(station.nextStation)
+            if (nextSt.nextStation === "0") {
+                resetScores();
+            }
         } else {
             document.getElementById("validationResult").textContent = "Eh non, ce n'est pas ça. Réessayez !";
+            updateScore(-1, station.team);
+            document.getElementById("teamScore").textContent = getScore(station.team);
         }
     });
-}
-
-function updateScoreFile(teamId, newScore) {
-    try {
-        // Find the index of the object with the matching team_ID
-        let index = scores.findIndex(item => item.team_ID === teamId);
-        if (index === -1) {
-            throw new Error('Team not found');
-        }
-
-        // Update the score for the specified team
-        scores[index].score = newScore;
-
-        // Convert the updated data to JSON
-        let jsonData = JSON.stringify(scores, null, 2);
-
-        // Write the updated JSON data back to scores.json synchronously
-        let response = fetch('scores.json', {
-            method: 'PUT', // Use the appropriate HTTP method (PUT, POST, etc.)
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: jsonData,
-            async: false
-        });
-        if (!response.ok) {
-            throw new Error('Failed to update score data');
-        }
-        
-        console.log('Score updated successfully');
-    } catch (error) {
-        console.error('Error updating score:', error);
-    }
 }
 
 // Function to get the clue text for the current station
@@ -146,4 +121,66 @@ function revealNextLocation(nextStationId) {
 
     // Display the next clue location on the page
     document.getElementById("nextLocationText").textContent = nextStation.location;
+}
+
+// Function to initialize the score if it doesn't exist
+function initializeScore(teamId) {
+    if (teamId === '1') {
+        if (!localStorage.getItem('team1Score')) {
+            localStorage.setItem('team1Score', '0');
+            console.log('Initialized score for team 1')
+        }
+    } else {
+        if (!localStorage.getItem('team2Score')) {
+            localStorage.setItem('team2Score', '0');
+        }
+    }
+    
+}
+
+// Function to update the user's score
+function updateScore(increment, teamId) {
+    // Initialize the score if it doesn't exist
+    initializeScore(teamId);
+
+    let currentScore;
+    // Retrieve the current score from local storage, according to team
+    if (teamId === '1') {
+        currentScore = parseInt(localStorage.getItem('team1Score'));
+    } else {
+        currentScore = parseInt(localStorage.getItem('team2Score'));
+    }
+    
+
+    // Update the score
+    currentScore += increment;
+
+    // Store the updated score back to local storage
+    if (teamId === '1') {
+        localStorage.setItem('team1Score', currentScore.toString());
+    } else {
+        localStorage.setItem('team2Score', currentScore.toString());
+    }
+
+    // Return the updated score
+    return currentScore;
+}
+
+// Function to get the user's score
+function getScore(teamId) {
+    // Initialize the score if it doesn't exist
+    initializeScore(teamId);
+
+    // Retrieve the score from local storage
+    if (teamId === '1') {
+        return parseInt(localStorage.getItem('team1Score'));
+    } else {
+        return parseInt(localStorage.getItem('team2Score'));
+    }
+    
+}
+
+function resetScores() {
+    localStorage.removeItem('team1Score');
+    localStorage.removeItem('team2Score');
 }

@@ -33,15 +33,51 @@
         "answer": "15",
         "clue": "Pour cette station, vous devez... blabla",
         "location": "Parking du gymnase. Chercher la plaque que vous venez de trouver.",
-        "nextStation": "5"
+        "nextStation": "6"
     },
     {
         "id": "5",
         "team": "1",
         "number": "3",
-        "answer": null,
+        "answer": "station5",
         "clue": "Pour cette station, vous devez... blabla",
         "location": "Grand arbre devant la HEP",
-        "nextStation": null
+        "nextStation": "7"
+    },
+    {
+        "id": "6",
+        "team": "2",
+        "number": "3",
+        "answer": "station6",
+        "clue": "Pour cette station, vous devez... blabla",
+        "location": "Salle de physique",
+        "nextStation": "8"
+    },
+    {
+        "id": "7",
+        "team": "1",
+        "number": "4",
+        "answer": "station7",
+        "clue": "Pour cette station, vous devez... blabla",
+        "location": "Escalier terrain de sport",
+        "nextStation": "9"
+    },
+    {
+        "id": "8",
+        "team": "2",
+        "number": "4",
+        "answer": "station8",
+        "clue": "Pour cette station, vous devez... blabla",
+        "location": "Bibliothèque",
+        "nextStation": "9"
+    },
+    {
+        "id": "9",
+        "team": "1",
+        "number": "5",
+        "answer": "dummyAnswer",
+        "clue": "Pour cette station, vous devez... blabla",
+        "location": "Grand arbre devant la HEP",
+        "nextStation": "0"
     }
 ]
