@@ -147,7 +147,14 @@ button:hover {
 
 /* CSS styles for the page icons */
 .clue-icon {
-    width: 24px; /* Adjust the width of the icon */
+    width: 27px; /* Adjust the width of the icon */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    margin-right: 8px; /* Add spacing between the icon and the text */
+    vertical-align: middle;
+}
+
+.compass-icon {
+    width: 30px; /* Adjust the width of the icon */
     height: auto; /* Automatically adjust the height to maintain aspect ratio */
     margin-right: 8px; /* Add spacing between the icon and the text */
     vertical-align: middle;

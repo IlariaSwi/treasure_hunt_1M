@@ -1,5 +1,5 @@
 
-let stations, scores;
+let stations;
 
 // Function to fetch station data from JSON file
 async function fetchStationData() {
@@ -11,12 +11,6 @@ async function fetchStationData() {
         let data = await response.json();
         stations = data; // Assign data to the global stations variable
 
-        response = await fetch('scores.json');
-        if (!response.ok) {
-            throw new Error('Failed to fetch score data');
-        }
-        data = await response.json();
-        scores = data; // Assign data to the global scores variable
     } catch (error) {
         console.error('Error loading data:', error);
         throw error; // Propagate the error
