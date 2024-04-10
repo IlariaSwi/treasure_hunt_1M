@@ -82,8 +82,8 @@ button:hover {
 
 #nextLocationText {
     display: none; 
-    width: 400px;
-    /* max-width: 400px; Adjust maximum width as needed */
+    width: 100%;
+    max-width: 400px;
     margin: 20px auto; /* Center the element horizontally */
     padding: 10px; /* Add padding to create space around the content */
     background-color: #f0f0f0; /* Set background color */
