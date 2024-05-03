@@ -3,72 +3,72 @@
         "id": "1",
         "team": "1",
         "number": "1",
-        "answer": "banana",
-        "clue": "Rentrez le mot qui apparaît quand vous décodez le message en binaire.",
-        "location": "Cafétéria",
-        "nextStation": "3" 
+        "answer": "mistral",
+        "clue": "Rentrez le mot qui apparaît quand vous figez le mouvement du ventilateur.",
+        "location": "Salle 1...., salle des profs de physique.",
+        "nextStation": "2" 
     },
     {
         "id": "2",
-        "team": "2",
-        "number": "1",
-        "answer": "234",
-        "clue": "Pour cette station, vous devez... blabla",
-        "location": "Bibliothèque",
-        "nextStation": "4"
+        "team": "1",
+        "number": "2",
+        "answer": "boucle",
+        "clue": "Rentrez le mot que vous voyez sur l'escalier, en lisant du bas vers le haut.",
+        "location": "Escalier derrière le terrain de foot, entre le terrain et le bâtiment B21.",
+        "nextStation": "3"
     },
     {
         "id": "3",
         "team": "1",
-        "number": "2",
-        "answer": "coco",
-        "clue": "Pour cette station, vous devez... blabla",
-        "location": "Dans la forêt derrière la salle de sport",
-        "nextStation": "5"
+        "number": "3",
+        "answer": "géolocalisation",
+        "clue": "Rentrez le mot trouvé à l'emplacement indiqué.",
+        "location": "Local de sport entre le terrain de foot et celui de basket. Ce local se trouve derrière une porte couverte de graffitis.",
+        "nextStation": "4"
     },
     {
         "id": "4",
-        "team": "2",
-        "number": "2",
-        "answer": "15",
-        "clue": "Pour cette station, vous devez... blabla",
-        "location": "Parking du gymnase. Chercher la plaque que vous venez de trouver.",
-        "nextStation": "6"
+        "team": "1",
+        "number": "4",
+        "answer": "corsaire",
+        "clue": "Rentrez le mot trouvé dans l'objet caché.",
+        "location": "Bibliothèque",
+        "nextStation": "9"
     },
     {
         "id": "5",
-        "team": "1",
-        "number": "3",
-        "answer": "station5",
-        "clue": "Pour cette station, vous devez... blabla",
-        "location": "Grand arbre devant la HEP",
-        "nextStation": "7"
+        "team": "2",
+        "number": "1",
+        "answer": "géolocalisation",
+        "clue": "Rentrez le mot trouvé à l'emplacement indiqué.",
+        "location": "Local de sport entre le terrain de foot et celui de basket. Ce local se trouve derrière une porte couverte de graffitis.",
+        "nextStation": "6"
     },
     {
         "id": "6",
         "team": "2",
-        "number": "3",
-        "answer": "station6",
-        "clue": "Pour cette station, vous devez... blabla",
-        "location": "Salle de physique",
-        "nextStation": "8"
+        "number": "2",
+        "answer": "corsaire",
+        "clue": "Rentrez le mot trouvé dans l'objet caché.",
+        "location": "Bibliothèque",
+        "nextStation": "7"
     },
     {
         "id": "7",
-        "team": "1",
-        "number": "4",
-        "answer": "station7",
-        "clue": "Pour cette station, vous devez... blabla",
-        "location": "Escalier terrain de sport",
-        "nextStation": "9"
+        "team": "2",
+        "number": "3",
+        "answer": "mistral",
+        "clue": "Rentrez le mot qui apparaît quand vous figez le mouvement du ventilateur.",
+        "location": "Salle 1...., salle des profs de physique.",
+        "nextStation": "8"
     },
     {
         "id": "8",
         "team": "2",
         "number": "4",
-        "answer": "station8",
-        "clue": "Pour cette station, vous devez... blabla",
-        "location": "Bibliothèque",
+        "answer": "boucle",
+        "clue": "Rentrez le mot que vous voyez sur l'escalier, en lisant du bas vers le haut.",
+        "location": "Escalier derrière le terrain de foot, entre le terrain et le bâtiment B21.",
         "nextStation": "9"
     },
     {
@@ -77,7 +77,7 @@
         "number": "5",
         "answer": "dummyAnswer",
         "clue": "Pour cette station, vous devez... blabla",
-        "location": "Grand arbre devant la HEP",
+        "location": "À l'ombre du grand arbre qui se trouve entre le gymnase et la HEP.",
         "nextStation": "0"
     }
 ]
