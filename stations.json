@@ -12,7 +12,7 @@
         "id": "2",
         "team": "1",
         "number": "2",
-        "answer": "boucle",
+        "answer": "barque",
         "clue": "Rentrez le mot que vous voyez sur l'escalier, en lisant du bas vers le haut.",
         "location": "Escalier derrière le terrain de foot, entre le terrain et le bâtiment B21.",
         "nextStation": "3"
@@ -21,7 +21,7 @@
         "id": "3",
         "team": "1",
         "number": "3",
-        "answer": "géolocalisation",
+        "answer": "cartographie",
         "clue": "Rentrez le mot trouvé à l'emplacement indiqué.",
         "location": "Local de sport entre le terrain de foot et celui de basket. Ce local se trouve derrière une porte couverte de graffitis.",
         "nextStation": "4"
@@ -39,7 +39,7 @@
         "id": "5",
         "team": "2",
         "number": "1",
-        "answer": "géolocalisation",
+        "answer": "cartographie",
         "clue": "Rentrez le mot trouvé à l'emplacement indiqué.",
         "location": "Local de sport entre le terrain de foot et celui de basket. Ce local se trouve derrière une porte couverte de graffitis.",
         "nextStation": "6"
@@ -66,7 +66,7 @@
         "id": "8",
         "team": "2",
         "number": "4",
-        "answer": "boucle",
+        "answer": "barque",
         "clue": "Rentrez le mot que vous voyez sur l'escalier, en lisant du bas vers le haut.",
         "location": "Escalier derrière le terrain de foot, entre le terrain et le bâtiment B21.",
         "nextStation": "9"
