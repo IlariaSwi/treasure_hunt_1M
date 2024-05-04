@@ -186,6 +186,7 @@ function getScore(teamId) {
 function resetScores() {
     localStorage.removeItem('team1Score');
     localStorage.removeItem('team2Score');
+    localStorage.removeItem('alreadyAnswered');
 }
 
 function markStationAsAnswered(id) {
