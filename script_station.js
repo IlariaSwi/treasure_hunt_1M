@@ -69,6 +69,8 @@ function initializePage(station) {
             document.getElementById("teamScore").textContent = getScore(station.team);
             // hide the answer block
             document.getElementById("answerBox").style.display = "none";
+            // mark the current station as answered. This locks the points increment for this station.
+            markStationAsAnswered(station.id);
             // if last station, clear local storage. Get next station
             let nextSt = getStationById(station.nextStation)
             if (nextSt.nextStation === "0") {
@@ -122,14 +124,19 @@ function initializeScore(teamId) {
     if (teamId === '1') {
         if (!localStorage.getItem('team1Score')) {
             localStorage.setItem('team1Score', '0');
-            console.log('Initialized score for team 1')
+            console.log('Initialized score for team 1');
         }
     } else {
         if (!localStorage.getItem('team2Score')) {
             localStorage.setItem('team2Score', '0');
+            console.log('Initialized score for team 1');
         }
     }
-    
+    if(!localStorage.getItem('alreadyAnswered')){
+        let alrAnsArray = ['0', '0', '0', '0', '0', '0', '0', '0'];
+        let string = JSON.stringify(alrAnsArray) 
+        localStorage.setItem('alreadyAnswered', string) 
+    }
 }
 
 // Function to update the user's score
@@ -177,4 +184,17 @@ function getScore(teamId) {
 function resetScores() {
     localStorage.removeItem('team1Score');
     localStorage.removeItem('team2Score');
+}
+
+function markStationAsAnswered(id) {
+    let array_id = parseInt(id) - 1;
+    let retString = localStorage.getItem('alreadyAnswered') 
+    let retArray = JSON.parse(retString) 
+    console.log(retArray);
+    // mark current station as answered
+    retArray[array_id] = '1';
+    console.log(retArray);
+    // store updated array back to localStorage
+    let string = JSON.stringify(retArray);
+    localStorage.setItem('alreadyAnswered', string);
 }
