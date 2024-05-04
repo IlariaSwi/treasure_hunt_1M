@@ -13,10 +13,13 @@
         <img src="images/station-image.jpg" alt="Station Image" class="station-image">
         <div class = "container-specific">
             <p id="teamInfo">Équipe <span id="team"></span></p>
+            <img src="images/score-icon.png" alt="Score Icon" class="score-icon">
+            <!-- Span element to hold the score value -->
+            <span id="teamScore" class="score-value"></span>
         </div>
         <div id="clueBox">
             <h2><img src="images/clue.png" alt="Clue Icon" class="clue-icon"> Énigme courante :</h2>
-            <p id="clueText"></p>
+            <p id="clueText" class="text-box"></p>
         </div>
         <div id="answerBox">
             <!-- <h2>Entrez votre réponse :</h2> -->
@@ -26,8 +29,8 @@
             <div id="validationResult"></div>
         </div>
         <div id="nextLocation">
-            <!-- <h2>Next Clue Location:</h2> -->
-            <p id="nextLocationText"></p>
+            <h2><img src="images/map.png" alt="Compass Icon" class="compass-icon"> Prochaine station :</h2>
+            <p id="nextLocationText" class="text-box"></p>
         </div>        
     </div>
     <script src="script_station.js"></script>

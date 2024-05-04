@@ -13,9 +13,9 @@ function displayFirstLocation(teamNumber) {
     // Display the first location for the selected team
     let firstLocation;
     if (teamNumber === "1") {
-        firstLocation = "Station 1 pour équipe 1"; // Replace with actual location
+        firstLocation = "Salle 1...., salle des profs de physique."; // Replace with actual location
     } else {
-        firstLocation = "Station 1 pour équipe 2"; // Replace with actual location
+        firstLocation = "Local de sport entre le terrain de foot et celui de basket. Ce local se trouve derrière une porte couverte de graffitis."; // Replace with actual location
     }
     document.getElementById("clueDisplay").innerHTML = "<p>" + firstLocation + "</p>";
 }
