@@ -65,7 +65,7 @@ function initializePage(station) {
             document.getElementById("nextLocationText").style.display = "block";
             revealNextLocation(station.nextStation); // Pass 'stations' array
             // add points per corrects answer
-            updateScore(4, station.team);
+            updateScore(4, station.team, station.id);
             document.getElementById("teamScore").textContent = getScore(station.team);
             // hide the answer block
             document.getElementById("answerBox").style.display = "none";
@@ -78,7 +78,7 @@ function initializePage(station) {
             }
         } else {
             document.getElementById("validationResult").textContent = "Eh non, ce n'est pas ça. Réessayez !";
-            updateScore(-1, station.team);
+            updateScore(-1, station.team, station.id);
             document.getElementById("teamScore").textContent = getScore(station.team);
         }
     });
@@ -140,7 +140,7 @@ function initializeScore(teamId) {
 }
 
 // Function to update the user's score
-function updateScore(increment, teamId) {
+function updateScore(increment, teamId, stationId) {
     // Initialize the score if it doesn't exist
     initializeScore(teamId);
 
@@ -152,15 +152,17 @@ function updateScore(increment, teamId) {
         currentScore = parseInt(localStorage.getItem('team2Score'));
     }
     
+    // Before updating the score, check whether the station answer has already been given
+    if (okToUpdate(stationId)) {
+        // Update the score
+        currentScore += increment;
 
-    // Update the score
-    currentScore += increment;
-
-    // Store the updated score back to local storage
-    if (teamId === '1') {
-        localStorage.setItem('team1Score', currentScore.toString());
-    } else {
-        localStorage.setItem('team2Score', currentScore.toString());
+        // Store the updated score back to local storage
+        if (teamId === '1') {
+            localStorage.setItem('team1Score', currentScore.toString());
+        } else {
+            localStorage.setItem('team2Score', currentScore.toString());
+        }
     }
 
     // Return the updated score
@@ -197,4 +199,19 @@ function markStationAsAnswered(id) {
     // store updated array back to localStorage
     let string = JSON.stringify(retArray);
     localStorage.setItem('alreadyAnswered', string);
+}
+
+function okToUpdate(id) {
+    let array_id = parseInt(id) - 1;
+    let retString = localStorage.getItem('alreadyAnswered') 
+    let retArray = JSON.parse(retString) 
+    console.log(retArray);
+    if (retArray[array_id] === "1") {
+        console.log("answer already given");
+        return true;
+    }
+    else {
+        console.log("answer not yet given");
+        return false;
+    } 
 }
