@@ -208,10 +208,10 @@ function okToUpdate(id) {
     console.log(retArray);
     if (retArray[array_id] === "1") {
         console.log("answer already given");
-        return true;
+        return false; // cannot update
     }
     else {
         console.log("answer not yet given");
-        return false;
+        return true; // ok to update
     } 
 }
