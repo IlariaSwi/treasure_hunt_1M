@@ -5,7 +5,7 @@
         "number": "1",
         "answer": "mistral",
         "clue": "Rentrez le mot qui apparaît quand vous figez le mouvement du ventilateur.",
-        "location": "Salle 1...., salle des profs de physique.",
+        "location": "Salle 109, labo de physique.",
         "nextStation": "2" 
     },
     {
@@ -59,7 +59,7 @@
         "number": "3",
         "answer": "mistral",
         "clue": "Rentrez le mot qui apparaît quand vous figez le mouvement du ventilateur.",
-        "location": "Salle 1...., salle des profs de physique.",
+        "location": "Salle 109, labo de physique.",
         "nextStation": "8"
     },
     {

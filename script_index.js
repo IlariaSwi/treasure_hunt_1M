@@ -13,7 +13,7 @@ function displayFirstLocation(teamNumber) {
     // Display the first location for the selected team
     let firstLocation;
     if (teamNumber === "1") {
-        firstLocation = "Salle 1...., salle des profs de physique."; // Replace with actual location
+        firstLocation = "Salle 109, labo de physique."; // Replace with actual location
     } else {
         firstLocation = "Local de sport entre le terrain de foot et celui de basket. Ce local se trouve derrière une porte couverte de graffitis."; // Replace with actual location
     }
