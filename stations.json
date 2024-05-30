@@ -14,7 +14,7 @@
         "number": "2",
         "answer": "barque",
         "clue": "Rentrez le mot que vous voyez sur l'escalier, en lisant du bas vers le haut.",
-        "location": "Escalier derrière le terrain de foot, entre le terrain et le bâtiment B21.",
+        "location": "Escalier entre le terrain de basket et la HEP, point GPS: 46.512460, 6.620126.",
         "nextStation": "3"
     },
     {
@@ -68,7 +68,7 @@
         "number": "4",
         "answer": "barque",
         "clue": "Rentrez le mot que vous voyez sur l'escalier, en lisant du bas vers le haut.",
-        "location": "Escalier derrière le terrain de foot, entre le terrain et le bâtiment B21.",
+        "location": "Escalier entre le terrain de basket et la HEP, point GPS: 46.512460, 6.620126.",
         "nextStation": "9"
     },
     {
